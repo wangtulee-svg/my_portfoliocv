@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaoLeeVang MAIVANG - CV</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2a 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 40px 20px;
+    }
+
+    .cv-container {
+      max-width: 500px;
+      width: 100%;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #d9ecff 0%, #b8d4ff 100%);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1c1c21 0%, #2d2d35 100%);
+      color: #d9ecff;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    button svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .quality-note {
+      color: #888;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <img id="cvImage" src="./images/cv.png" alt="KaoLeeVang MAIVANG - CV">
+  </div>
+
+  <button id="downloadBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+    Download as PDF
+  </button>
+  <div class="quality-note">📄 PDF</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const downloadBtn = document.getElementById('downloadBtn');
+    const cvImage = document.getElementById('cvImage');
+
+    downloadBtn.addEventListener('click', async () => {
+      const originalText = downloadBtn.innerHTML;
+      downloadBtn.innerHTML = '⏳ Generating PDF...';
+      downloadBtn.disabled = true;
+
+      try {
+        // Wait for image to be fully loaded
+        await new Promise((resolve) => {
+          if (cvImage.complete) {
+            resolve();
+          } else {
+            cvImage.onload = resolve;
+          }
+        });
+
+        // Get original image dimensions
+        const originalWidth = cvImage.naturalWidth;
+        const originalHeight = cvImage.naturalHeight;
+        
+        console.log(`Original image: ${originalWidth} x ${originalHeight}`);
+
+        // Create a canvas at original size for maximum quality
+        const canvas = document.createElement('canvas');
+        canvas.width = originalWidth;
+        canvas.height = originalHeight;
+        const ctx = canvas.getContext('2d');
+        
+        // Draw image at original resolution
+        ctx.drawImage(cvImage, 0, 0, originalWidth, originalHeight);
+        
+        // Get image data as PNG with maximum quality
+        const imgData = canvas.toDataURL('image/png', 1.0);
+        
+        const { jsPDF } = window.jspdf;
+        
+        // A4 dimensions in mm
+        const pdfWidth = 210;
+        const pdfHeight = 297;
+        
+        // Calculate image dimensions to fit A4
+        const imgWidth = pdfWidth;
+        const imgHeight = (originalHeight * pdfWidth) / originalWidth;
+        
+        // Create PDF - SINGLE PAGE ONLY
+        const pdf = new jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        });
+        
+        // Add image to PDF - only once, no second page
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+        
+        // REMOVED the second page condition - now only 1 page!
+        
+        pdf.save('KaoLeeVang_MAIVANG_CV.pdf');
+        
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to generate PDF. Please try again.');
+      } finally {
+        downloadBtn.innerHTML = originalText;
+        downloadBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
