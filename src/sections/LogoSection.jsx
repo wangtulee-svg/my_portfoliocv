@@ -1,7 +1,7 @@
 import React from 'react'
 import { logoIconsList } from '../constants/index.js'
 
-const LogoIcon = ({ icon }) => {
+const LogoIcon = ({ icon, index }) => {
     return (
         <div className='flex-none flex-center marquee-item'>
             <img src={icon.imgPath} alt={icon.name} />
@@ -17,12 +17,14 @@ const LogoSection = () => {
 
         <div className='marquee h-52'>
             <div className='marquee-box md:gap-12 gap-5'>
-               {logoIconsList.map((icon) => (
-                 <LogoIcon key={icon.name} icon={icon} />
+               {/* First set - add unique key with prefix */}
+               {logoIconsList.map((icon, index) => (
+                 <LogoIcon key={`first-${icon.name}-${index}`} icon={icon} index={index} />
                ))}
 
-               {logoIconsList.map((icon) => (
-                 <LogoIcon key={icon.name} icon={icon} />
+               {/* Second set - add different prefix to avoid duplicate keys */}
+               {logoIconsList.map((icon, index) => (
+                 <LogoIcon key={`second-${icon.name}-${index}`} icon={icon} index={index} />
                ))}
             </div>
         </div>

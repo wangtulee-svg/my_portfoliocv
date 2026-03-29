@@ -54,13 +54,13 @@ const Contact = () => {
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="ຕິດຕໍ່ສອບຖາມ – ຫາພວກເຮົາ"
-          sub="💬 ມີຄຳຖາມ ຫຼື ແນວຄວາມຄິດບໍ? ມາລົມກັນໄດ້ເລີຍ! 🚀"
+          title="Let's talk"
+          sub="💬Contact Me 🚀"
         />
 
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10 relative">
+            <div className="flex-center card-border rounded-xl p-10 relative bg-gray-900">
               
               {/* --- STATUS NOTIFICATIONS --- */}
               {status === "success" && (
@@ -82,7 +82,7 @@ const Contact = () => {
               >
                 {/* Name Input */}
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-white font-medium">ຊື່ຂອງທ່ານ</label>
+                  <label htmlFor="name" className="text-white font-medium">Your Name</label>
                   <input
                     type="text"
                     id="name"
@@ -97,7 +97,7 @@ const Contact = () => {
 
                 {/* Email Input */}
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-white font-medium">ອີເມວຂອງທ່ານ</label>
+                  <label htmlFor="email" className="text-white font-medium">Your Email</label>
                   <input
                     type="email"
                     id="email"
@@ -112,13 +112,13 @@ const Contact = () => {
 
                 {/* Message Input */}
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-white font-medium">ຂໍ້ຄວາມຂອງທ່ານ</label>
+                  <label htmlFor="message" className="text-white font-medium">Your Message</label>
                   <textarea
                     id="message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="ພວກເຮົາສາມາດຊ່ວຍທ່ານຫຍັງໄດ້ບໍ?"
+                    placeholder="What do you want to say?"
                     rows="5"
                     required
                     className="input-field resize-none"
@@ -147,7 +147,7 @@ const Contact = () => {
 
           {/* 3D Model / Experience Sidebar */}
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden shadow-2xl">
+            <div className="bg-[#3b82f6] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden shadow-2xl">
               <ContactExperience />
             </div>
           </div>

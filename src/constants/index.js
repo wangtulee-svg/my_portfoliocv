@@ -1,38 +1,42 @@
 const navLinks = [
   {
-    name: "ຜົນງານ",
-    link: "#work",
-  },
-  {
-    name: "ປະສົບການ",
-    link: "#experience",
-  },
-  {
-    name: "ທັກສະ",
+    name: "Skills",
     link: "#skills",
   },
   {
-    name: "ຜົນຈາກການຮອງຮັບ",
-    link: "#testimonials",
+    name: "Experience",
+    link: "#experience",
   },
+  {
+    name: "Project",
+    link: "#work",
+  },
+  // {
+  //   name: "ຜົນຈາກການຮອງຮັບ",
+  //   link: "#testimonials",
+  // },
+  {
+    name: "Contact",
+    link: "#contact",
+  }
 ];
 
 const words = [
-  { text: "ວິທີການ", imgPath: "/images/ideas.svg" },
-  { text: "ແນວຄວາມຄິດ", imgPath: "/images/concepts.svg" },
-  { text: "ການອອກແບບ", imgPath: "/images/designs.svg" },
-  { text: "ການຂຽນໂຄດ", imgPath: "/images/code.svg" },
-  { text: "ວິທີການ", imgPath: "/images/ideas.svg" },
-  { text: "ແນວຄວາມຄິດ", imgPath: "/images/concepts.svg" },
-  { text: "ການອອກແບບ", imgPath: "/images/designs.svg" },
-  { text: "ການຂຽນໂຄດ", imgPath: "/images/code.svg" },
+  { text: "Computer", imgPath: "/images/python_logo.svg" },
+  { text: "Computer", imgPath: "/images/AI_logo.svg" },
+  { text: "Computer", imgPath: "/images/typescript_logo.svg" },
+  { text: "Computer", imgPath: "/images/Javascript_logo.svg" },
+  { text: "Computer", imgPath: "/images/react_logo.svg" },
+  { text: "Computer", imgPath: "/images/flutter_logo.svg" },
+  { text: "Computer", imgPath: "/images/sql_logo1.svg" },
+  { text: "Computer", imgPath: "/images/CSh_logo.svg" },
 ];
 
 const counterItems = [
-  { value: 6, suffix: "+", label: "ປີປະສົບການ" },
-  { value: 100, suffix: "+", label: "ໂປຣເຈັກທີ່ລູກຄ້າພໍໃຈ" },
-  { value: 108, suffix: "+", label: "ໂປຣເຈັກທີ່ເຮັດໄປແລ້ວ" },
-  { value: 90, suffix: "%", label: "ອັດຕາການຮັກສາລູກຄ້າ" },
+  { value: 17, suffix: "+", label: "All Projects" },
+  { value: 6, suffix: "+", label: "Projects Completed" },
+  { value: 4, suffix: "", label: "Satisfied" },
+  { value: 90, suffix: "%", label: "Code Quality" },
 ];
 
 const logoIconsList = [
@@ -73,116 +77,165 @@ const logoIconsList = [
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "ໃສ່ໃຈຄຸນນະພາບ",
-    desc: "ສົ່ງມອບຜົນງານທີ່ມີຄຸນນະພາບສູງ ໂດຍໃຫ້ຄວາມສຳຄັນກັບທຸກລາຍລະອຽດຢ່າງຈິງຈັງ.",
+    imgPath: "/images/new_logo.svg",
+    title: "User-Friendly Interface",
+    desc: "A clean and intuitive interface designed to provide a smooth and engaging user experience.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "ການສື່ສານທີ່ໜ້າເຊື່ອຖື",
-    desc: "ອັບເດດຂໍ້ມູນໃຫ້ທ່ານໃນທຸກຂັ້ນຕອນ ເພື່ອຮັບປະກັນຄວາມໂປ່ງໃສ ແລະ ຄວາມຊັດເຈນ.",
+    imgPath: "/images/Chat_logo.svg",
+    title: "Real-Time Conversation",
+    desc: "Supports real-time messaging to simulate natural and interactive conversations with users.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "ສົ່ງວຽກມອບກົງຕາມກຳນົດ On-Time",
-    desc: "ຮັບປະກັນວ່າໂຄງການສຳເລັດລົງຕາມແຜນກຳນົດ, ພ້ອມດ້ວຍຄຸນນະພາບ ແລະ ຄວາມສົນໃຈໃນລາຍລະອຽດ.",
+    imgPath: "/images/star_home_icon.svg",
+    title: "E-commerce Platform",
+    desc: "Developed a web application for land and property sales and booking, focusing on backend development and system testing to ensure reliability.",
   },
 ];
 
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    name: "AI",
+    imgPath: "/images/image.svg",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "MySQL",
+    imgPath: "/images/MySQL3.svg",
+    scale: 1
   },
-  {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
-  },
+  // {
+  //   name: "Backend Developer",
+  //   imgPath: "/images/logos/node.png",
+  // },
+  // {
+  //   name: "Interactive Developer",
+  //   imgPath: "/images/logos/three.png",
+  // },
+  // {
+  //   name: "Project Manager",
+  //   imgPath: "/images/logos/git.svg",
+  // },
 ];
 
 const techStackIcons = [
   {
-    name: "React Developer",
+    name: "React.js",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
+    name: "Python",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
+    name: "Node.js",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
+    name: "C#",
+    modelPath: "/models/C-Sharp.glb",
+    scale: 0.07,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "Git",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+  {
+    name: "Typescript",
+    modelPath: "/models/typescript_3d_model.glb",
+    scale: 40,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "JavaScript",
+    modelPath: "/models/javascript_model.glb",
+    scale: 40,
+    rotation: [0, 0, 0],
+    position: [0, -1.8, 0]
+  },
+  {
+    name: "Three.js",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+    name: "HTML5",
+    modelPath: "/models/html5_logo.glb",
+    scale: 0.8,
+    rotation: [0, -Math.PI / 2, 0],
+    position: [0, -2, 0]
   },
+  {
+    name: "CSS3",
+    modelPath: "/models/modern_3d_css_logo.glb",
+    scale: 40,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "Tailwind CSS",
+    modelPath: "/models/tailwind_css_model.glb",
+    scale: 45,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "MongoDB",
+    modelPath: "/models/mongodb_3d_model.glb",
+    scale: 50,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "Flutter",
+    modelPath: "/models/flutter.glb",
+    scale: 28,
+    rotation: [0, 0, 0]
+  }
 ];
 
 const expCards = [
   {
     review:
-      "Wells ໄດ້ນຳເອົາຄວາມຄິດສ້າງສັນ ແລະ ຄວາມຊ່ຽວຊານດ້ານເຕັກນິກມາສູ່ທີມ, ເຊິ່ງຊ່ວຍປັບປຸງປະສິດທິພາບ Frontend ຂອງພວກເຮົາໃຫ້ດີຂຶ້ນຢ່າງຫຼວງຫຼາຍ. ຜົນງານຂອງລາວມີຄຸນຄ່າຫຼາຍໃນການສົ່ງມອບປະສົບການທີ່ວ່ອງໄວກວ່າເກົ່າ.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - ປັດຈຸບັນ",
+      "2023 – Present: Bachelor of Computer Science, National University of Laos; English Studies, Sirimoungkhoun College.",
+    imgPath: "/images/Univers2_logo.svg",
+    logoPath: "/images/new_logo.svg",
+    title: "Chatbot AI (Personal Project)",
+    date: "October 2025 - ປັດຈຸບັນ",
     responsibilities: [
-      "ພັດທະນາ ແລະ ເບິ່ງແຍງຟີເຈີຕ່າງໆໃນເວັບໄຊ Hostinger ສໍາລັບຜູ້ໃຊ້ງານ.",
-      "ຮ່ວມມືຢ່າງໃກ້ຊິດກັບນັກອອກແບບ UI/UX ເພື່ອຮັບປະກັນປະສົບການຜູ້ໃຊ້ທີ່ລຽບງ່າຍ.",
-      "ປັບປຸງແອັບພລິເຄຊັນເວັບເພື່ອຄວາມໄວ ແລະ ຄວາມສາມາດໃນການຂະຫຍາຍຕົວສູງສຸດ.",
+      "Developed a chatbot application using React and MongoDB.",
+      "Designed and implemented the user interface using React.js.",
+      "Built backend functionality using JavaScript.",
     ],
   },
   {
     review:
-      "ການປະກອບສ່ວນຂອງ Wells ເຂົ້າໃນເວັບແອັບພລິເຄຊັນຂອງ Docker ແມ່ນໂດດເດັ່ນຫຼາຍ. ລາວຮັບມືກັບສິ່ງທ້າທາຍຕ່າງໆ ດ້ວຍແນວຄິດໃນການແກ້ໄຂບັນຫາທີ່ດີຢ້ຽມ.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+      "2022-2023 University of Health Sciences: Dental Technician",
+    imgPath: "/images/Book_icon.svg",
+    logoPath: "/images/star_home_icon.svg",
+    title: "E-commerce Web Application (Team Project)",
+    date: "Febuary 2025 - May 2025",
     responsibilities: [
-      "ນຳພາການພັດທະນາແອັບພລິເຄຊັນເວັບຂອງ Docker ໂດຍເນັ້ນທີ່ຄວາມສາມາດຂະຫຍາຍລະບົບ.",
-      "ເຮັດວຽກຮ່ວມກັບວິສະວະກອນ Backend ເພື່ອເຊື່ອມຕໍ່ APIs ເຂົ້າກັບ Frontend ຢ່າງມີປະສິດທິພາບ.",
-      "ປະກອບສ່ວນໃຫ້ກັບໂປຣເຈກ open-source ທີ່ຖືກນຳໃຊ້ໃນລະບົບນິເວດ Docker.",
+      "Collaborated with friends or classmates to develop a web application for land and property sales and booking.",
+      "I Worked on backend development and testing to ensure system functionality and stability.",
     ],
   },
   {
     review:
-      "ຜົນງານຂອງ Wells ໃນການພັດທະນາໂມບາຍແອັບຂອງ Appwrite ໄດ້ນຳເອົາຄຸນນະພາບ ແລະ ປະສິດທິພາບລະດັບສູງມາສູ່ທີມ. ລາວໄດ້ສົ່ງມອບວິທີການແກ້ໄຂທີ່ຊ່ວຍຍົກລະດັບປະສົບການການໃຊ້ງານ ແລະ ຕອບໂຈດເປົ້າໝາຍຂອງຜະລິດຕະພັນໄດ້ເປັນຢ່າງດີ.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+      "",
+    imgPath: "/images/School.svg",
+    logoPath: "/images/Chat_logo.svg",
+    title: "Real-time Chat Application (Personal Project)",
+    date: "March 2024 - January 2025",
     responsibilities: [
-      "ສ້າງແອັບມືຖືແບບຂ້າມແພລດຟອມໂດຍໃຊ້ React Native ເຊື່ອມຕໍ່ກັບບໍລິການ backend ຂອງ Appwrite.",
-      "ປັບປຸງປະສິດທິພາບແລະປະສົບການຜູ້ໃຊ້ຂອງແອັບຜ່ານການເພີ່ມປະສິດທິພາບໂຄດແລະການທົດສອບ.",
-      "ປະສານງານກັບທີມຜະລິດຕະພັນ ເພື່ອພັດທະນາຟີເຈີຕ່າງໆ ໂດຍອີງຕາມຄຳຄິດເຫັນຂອງຜູ້ໃຊ້ງານ.",
+      "Developed a real-time chat application using React and JavaScript.",
+      "Designed the UI and implemented core messaging features.",
     ],
   },
 ];
@@ -255,7 +308,7 @@ const socialImgs = [
   },
   {
     name: "fb",
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/share/1BTqwBUhC2/",
     imgPath: "/images/fb.png",
   },
   {

@@ -264,6 +264,50 @@ section {
     @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
   }
 
+  /* Full slide (bottom to top) - 100% */
+.tech-card-animated-bg-full {
+  @apply absolute left-0 bottom-[-100%] w-full h-3/4 bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+/* Half slide (bottom to middle) - 50% */
+.tech-card-animated-bg-half {
+  @apply absolute left-0 bottom-[-100%] w-full h-2/3 bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+/* Small slide (bottom to 30%) */
+.tech-card-animated-bg-small {
+  @apply absolute left-0 bottom-[-30%] w-full h-[30%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-card-animated-bg-plaubcaug {
+  @apply absolute left-0 bottom-[-40%] w-full h-[40%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-card-animated-bg-raucaum {
+  @apply absolute left-0 bottom-[-60%] w-full h-[60%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-card-animated-bg-tsibcaug {
+  @apply absolute left-0 bottom-[-50%] w-full h-[50%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-card-animated-bg-xyacaum {
+  @apply absolute left-0 bottom-[-70%] w-full h-[70%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-card-animated-bg-yimcaum {
+  @apply absolute left-0 bottom-[-80%] w-full h-[80%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+.tech-carf-animated-bg-cuajcaum {
+  @apply absolute left-0 bottom-[-85%] w-full h-[85%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
+/* Tiny slide (bottom to 15%) */
+.tech-card-animated-bg-tiny {
+  @apply absolute left-0 bottom-[-80%] w-full h-[80%] bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+}
+
   .tech-card-content {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
@@ -472,3 +516,4 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+

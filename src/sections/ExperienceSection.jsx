@@ -57,8 +57,8 @@ const ExperienceSection = () => {
     <section id='experience' className='w-full md:mt-40 mt-20 section-padding xl:px-0'>
         <div className='w-full h-full md:px-20 px-5'>
            <TitleHeader 
-           title="ປະສົບການການເຮັດວຽກ"
-           sub="🧰 ພາບລວມເສັ້ນທາງການເຮັດວຽກຂອງຂ້ອຍ"
+           title="Education and Experience"
+           sub="🧰 My Education and Experience"
            />
 
            <div className='mt-32 relative'>
