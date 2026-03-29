@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 export function DesktopComputer({ screenImage, ...props }) {
   const groupRef = useRef();
-  const { scene } = useGLTF('/models/programmer_desktop_3d_pc.glb');
+  const { scene } = useGLTF('./models/programmer_desktop_3d_pc.glb');
   
   const defaultImage = screenImage || '/images/Mydesktop.png';
 
