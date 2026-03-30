@@ -6,7 +6,7 @@ export function DesktopComputer({ screenImage, ...props }) {
   const groupRef = useRef();
   const { scene } = useGLTF('./models/programmer_desktop_3d_pc.glb');
   
-  const defaultImage = screenImage || '/images/Mydesktop.png';
+  const defaultImage = screenImage || './images/Mydesktop.png';
 
   useEffect(() => {
     console.log('🖥️ Creating realistic screen...');
@@ -56,4 +56,4 @@ export function DesktopComputer({ screenImage, ...props }) {
   return <primitive ref={groupRef} object={scene} {...props} />;
 }
 
-useGLTF.preload('/models/programmer_desktop_3d_pc.glb');
+useGLTF.preload('./models/programmer_desktop_3d_pc.glb');

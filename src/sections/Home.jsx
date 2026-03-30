@@ -44,7 +44,7 @@ const Home = () => {
             <div className="flex flex-wrap items-center gap-4 mb-8">
               {/* View CV Button with Blinking Eye */}
               <a 
-  href="/cv.html" 
+  href="./cv.html" 
   target="_blank"
   rel="noopener noreferrer"
   onMouseEnter={() => setIsButtonHovered(true)}
@@ -145,7 +145,7 @@ const Home = () => {
             <div className="relative inline-block">
               <div className="relative">
                 <img 
-                  src="/images/Myhome_img.png" 
+                  src="./images/Myhome_img.png" 
                   alt="Mr. Kaoleevang Maivang" 
                   className="max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] w-full h-auto object-contain drop-shadow-2xl"
                   style={{ filter: 'drop-shadow(0 20px 25px -12px rgba(0, 0, 0, 0.25))' }}

@@ -41,7 +41,7 @@ const HeroExperience = () => {
            rotation={[0, -Math.PI / 4, 0]}
          >
            <DesktopComputer 
-             screenImage="/images/Mydesktop.png"
+             screenImage="./images/Mydesktop.png"
            />
          </group>
       </Canvas>   

@@ -50,8 +50,8 @@ const ShowcaseSection = () => {
         description: "Developed an AI-powered chatbot application to simulate real-time conversations with users. Designed and implemented a responsive user interface using React.js. Built backend functionality and managed data storage using JavaScript and MongoDB. Implemented features such as real-time messaging and user interaction handling. Created and maintained the project independently, from design to deployment.",
         media: {
           type: "video",
-          src: "/videos/Video_demo.mp4",
-          poster: "/images/flutter2.png"
+          src: "./videos/Video_demo.mp4",
+          poster: "./images/flutter2.png"
         },
         githubUrl: "https://github.com/wangtulee-svg/HomeChatBot"
       },
@@ -61,8 +61,8 @@ const ShowcaseSection = () => {
         description: "",
         media: {
           type: "video",
-          src: "/videos/Video_demo3.mp4",   ///videos/chat-app-demo.mp4
-          poster: "/images/project-management.webp"
+          src: "./videos/Video_demo3.mp4",   ///videos/chat-app-demo.mp4
+          poster: "./images/project-management.webp"
         },
         githubUrl: "https://github.com/wangtulee-svg/E-commerce-Platform"
       },
@@ -72,8 +72,8 @@ const ShowcaseSection = () => {
         description: "",
         media: {
           type: "video",
-          src: "/videos/Video_demo2.mp4",
-          poster: "/images/Chat-app_logo.png"
+          src: "./videos/Video_demo2.mp4",
+          poster: "./images/Chat-app_logo.png"
         },
         githubUrl: "https://github.com/wangtulee-svg/Chat-application"
       }

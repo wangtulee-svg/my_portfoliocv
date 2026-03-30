@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <section id='hero' className='relative overflow-hidden'>
         <div className='absolute top-0 left-0 z-10'>
-          <img src="/images/bg.png" alt="background" />
+          <img src="./images/bg.png" alt="background" />
         </div>
 
         <div className='hero-layout'>
@@ -43,7 +43,7 @@ const Hero = () => {
                     <div className='bg-gradient-to-br from-[#d9ecff]/10 to-[#1c1c21]/20 rounded-2xl p-4 border border-[#d9ecff]/30 shadow-xl'>
                       <div className='relative w-full aspect-square max-w-[280px] mx-auto rounded-xl overflow-hidden'>
                         <img 
-                          src="/images/ImageResp.jpeg" 
+                          src="./images/ImageResp.jpeg" 
                           alt="Profile" 
                           className='w-full h-full object-cover'
                         />
@@ -60,8 +60,8 @@ const Hero = () => {
                         I'm a
                         <span className='slide'>
                             <span className='wrapper'>
-                               {words.map((word, index) => (
-                                <span key={index} className='flex items-center md:gap-3 gap-1 pb-2'>
+                               {words.map((word) => (
+                                <span key={word.text} className='flex items-center md:gap-3 gap-1 pb-2'>
                                     <img 
                                         src={word.imgPath}
                                         alt={word.text}

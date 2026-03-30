@@ -14,7 +14,7 @@ const FinisherBackground = () => {
         }
 
         const script = document.createElement('script');
-        script.src = '/js/finisher-header.es5.min.js';
+        script.src = './js/finisher-header.es5.min.js';
         script.onload = () => resolve();
         script.onerror = () => reject(new Error('Failed to load FinisherHeader'));
         document.body.appendChild(script);

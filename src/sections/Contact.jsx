@@ -134,7 +134,7 @@ const Contact = () => {
                     </p>
                     <div className="arrow-wrapper">
                       <img 
-                        src="/images/arrow-down.svg" 
+                        src="./images/arrow-down.svg" 
                         alt="arrow" 
                         className={loading ? "animate-pulse" : ""}
                       />
