@@ -7,10 +7,10 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/my_portfoliocv">
-      <ThemeProvider>
+    <ThemeProvider>
+      <BrowserRouter basename="/my_portfoliocv">
         <App />
-      </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
 );

@@ -188,7 +188,7 @@ const techStackIcons = [
   },
   {
     name: "MongoDB",
-    modelPath: "/models/mongodb_3d_model.glb",
+    modelPath: "/models/mongodb_d_model.glb",
     scale: 50,
     rotation: [0, 0, 0]
   },
